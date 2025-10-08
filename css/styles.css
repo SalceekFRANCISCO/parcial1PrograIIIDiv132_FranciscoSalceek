@@ -1,0 +1,174 @@
+
+@media (max-width: 768px){
+    .autor{
+        font-size: large;
+    }
+
+    .imgLibro{
+    height: 2000px;
+    width: 107px;
+    }
+}
+
+body{
+    margin: 0px;
+    background-color: rgb(251, 221, 177);
+}
+
+main{
+    /* border: 2px solid black; */
+    background-color: rgb(251, 221, 177);
+} 
+
+#seccionlibros ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0px;
+}  
+
+#listaLibros{
+    width: 14.4vw;
+    height: 38vh;
+    /* width: 200px; */
+    /* height: 300px; */
+    padding: 5px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(251, 221, 177);
+}
+
+.imgLibro{
+    height: 104px;
+    width: 64px;
+}
+
+.cabezera{
+    display: flex;
+    /* border: 4px green solid; */
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(238, 196, 28, 0.625);
+    
+}
+
+.botones{
+    display: flex;
+    gap: 10px;
+}
+
+.navegador{
+    /* border: 2px blue solid; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 3px;
+    
+}
+
+/*  imagen carrito */
+.carritoimg {
+    padding-bottom: 0%;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    /* border: 2px red solid; */
+    height: 7vh;
+    width: 7vh;
+}
+
+ /* .lupa, .lupaimg{
+    border: 2px solid;
+} */
+
+.lupa{
+    padding-top: 0.1vh;
+    border-radius: 3px;
+    margin-left: 0px;
+
+}
+
+.lupaimg{
+    width: 1vw;
+    height: 2.5vh;
+}
+
+.autor{
+    margin-bottom: 6px;
+    margin-top: 13px;
+}
+
+#barraBusqueda{
+    border-radius: 3px;
+    border-color: rgba(255, 255, 255, 0.535);
+    height: 2.5vh;
+    width: 7.8vw;
+}
+
+/* Pseudoclases*/
+.carrito:hover{
+    background-color: rgba(89, 155, 226, 0.734);
+}
+
+.carrito:active{
+    background-color: rgb(31, 105, 185);
+}
+
+.botonAgregar{
+    border-radius: 4px;
+    font-family: "Play", sans-serif;;
+    border-color: rgba(178, 151, 115, 0.129);
+    background-color: rgba(20, 134, 239, 0.811);
+    color: aliceblue;
+    /* text-transform: uppercase; */
+    /* font-weight: bold; */
+}
+
+.botonAgregar:hover{
+    cursor: pointer;
+    color: blueviolet(89, 155, 226, 0.734);
+}
+
+.botonAgregar:active{
+    color: rgb(7, 53, 102);
+}
+
+.principal {
+    display: flex;
+    justify-content: space-between;
+    /* border: 3px solid; */
+    margin-top: 0px;
+}
+
+.principal li {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    width: 300px;
+}
+
+.principal h3 {
+    border: 2px solid;
+    margin-top: 0px;
+    text-align: center;
+}
+
+/* .boton:hover{
+    cursor: pointer;
+    color: red;
+} */
+
+/**
+.separador {
+    border: 20px solid rgb(10, 61, 3);
+    height: 100vh;
+    overflow: auto;
+    }
+*/

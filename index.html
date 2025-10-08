@@ -1,0 +1,58 @@
+<!-- Enunciado:
+Una biblioteca digital necesita un sistema web sencillo para mostrar y gestionar sus libros.
+Sigue los siguientes pasos:
+
+Crea un array de objetos llamado libros. Cada objeto debe representar un libro con: id, titulo, autor, precio y ruta_img.
+
+Muestra los libros en pantalla en formato de tarjetas (imagen, título, autor y precio).
+
+Agrega un input de búsqueaada que permita filtrar los libros por título o autor.
+
+Añade un botón en cada tarjeta que permita agregar un libro a una lista de “favoritos”.
+
+Cada vez que se agregue un libro a favoritos, muéstralo en consola y asegúrate de que no se repita.
+Implementa una función init() que inicialice la aplicación mostrando todos los libros.
+
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/styles.css"></head>
+        <script src="js/main.js" defer></script>
+        <title> Biblioteca </title>
+    </head>
+    <body>
+        <!-- Estructuras semanticas-->
+        <header class="cabezera">
+            <nav class="navegador">
+                <input id="barraBusqueda"type="text" placeholder="¿Qué esta buscando?">
+                <div class="lupa">
+                    <label for="barraBusqueda">
+                        <img class="lupaimg" src="img/lupa-png.png" alt="lupa" for="#barraBusqueda"></img>
+                    </label>
+                </div>
+            </nav>
+            <div class="botones">
+                <button id="ordenarMenorMayor">ordenarMenorMayor</button>
+                <button id="ordenarMayorMenor">ordenarMayorMenor</button>
+                <button id="ordenarNombre">ordenar por Nombre</button>
+            </div>
+            <div class="carrito">
+                <img class="carritoimg" src="img\carrito.png" alt="carrito">
+            </div>
+        </header>
+        <main class = "principal">
+            <section id="seccionlibros"></section>
+            <div class = "separador"></div>
+            <aside id="asidecarrito"></aside>
+            <!-- <hr class="sos"> para dibujar lineas -->
+            <!-- <hr class="sos"> -->
+        </main>
+    </body>
+</html>
