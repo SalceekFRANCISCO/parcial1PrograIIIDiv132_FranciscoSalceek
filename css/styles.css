@@ -19,7 +19,7 @@ main{
     background-color: white;
 } 
 
-#seccionlibros ul{
+#seccionFrutas ul{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -28,9 +28,9 @@ main{
     padding: 0px;
 }  
 
-#listaLibros{
-    width: 14.4vw;
-    height: 38vh;
+#listaFrutas{
+    width: 12vw;
+    height: 22vh;
     /* width: 200px; */
     /* height: 300px; */
     padding: 5px;
@@ -88,9 +88,27 @@ main{
     width: 7vh;
 }
 
- /* .lupa, .lupaimg{
-    border: 2px solid;
-} */
+#asidecarrito li{
+    /* border: 2px solid;  */
+    display: flex;
+    justify-content: space-between;
+} 
+
+.listaCarrito{
+    border: 10px red;
+    /* display: ; */
+}
+
+.botonEliminar{
+    border-radius: 5px;
+    border-color: red;
+    background-color: red;
+    color: white;
+}
+
+.carrito-titulo{
+    text-align: center;
+}
 
 .lupa{
     padding-top: 0.1vh;
@@ -131,8 +149,14 @@ main{
     border-color: rgba(178, 151, 115, 0.129);
     background-color: rgba(15, 175, 82, 0.92);
     color: aliceblue;
-    /* text-transform: uppercase; */
-    /* font-weight: bold; */
+}
+
+.botonessection{
+    font-family: "Play", sans-serif;;
+    border-color: rgba(178, 151, 115, 0.129);
+    background-color: rgba(15, 175, 82, 0.92);
+    color: aliceblue;
+    margin-top: 9px;
 }
 
 .botonAgregar:hover{
@@ -153,7 +177,17 @@ main{
 }
 
 .div-Frutas-Texto{
+    display: flex;
+    flex-direction: column;
     text-align: center;
+}
+
+.div-Frutas{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
 }
 
 .principal li {
