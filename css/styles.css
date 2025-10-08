@@ -99,13 +99,15 @@ main{
 
 .listaCarrito{
     border: 10px red;
-    /* display: ; */
+     /* display: flex;  */
 }
 
 .listaCarrito .bloque-item{
     border: 10px red;
-    /* display: ; */
+    /* display: flex;  */
 }
+
+
 
 .botonEliminar{
     border-radius: 5px;
