@@ -1,20 +1,3 @@
-<!-- Enunciado:
-Una biblioteca digital necesita un sistema web sencillo para mostrar y gestionar sus libros.
-Sigue los siguientes pasos:
-
-Crea un array de objetos llamado libros. Cada objeto debe representar un libro con: id, titulo, autor, precio y ruta_img.
-
-Muestra los libros en pantalla en formato de tarjetas (imagen, título, autor y precio).
-
-Agrega un input de búsqueaada que permita filtrar los libros por título o autor.
-
-Añade un botón en cada tarjeta que permita agregar un libro a una lista de “favoritos”.
-
-Cada vez que se agregue un libro a favoritos, muéstralo en consola y asegúrate de que no se repita.
-Implementa una función init() que inicialice la aplicación mostrando todos los libros.
-
--->
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -25,29 +8,35 @@ Implementa una función init() que inicialice la aplicación mostrando todos los
         <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/styles.css"></head>
         <script src="js/main.js" defer></script>
-        <title> Biblioteca </title>
+        <title> Tienda de Frutas </title>
     </head>
     <body>
         <!-- Estructuras semanticas-->
         <header class="cabezera">
-            <nav class="navegador">
-                <input id="barraBusqueda"type="text" placeholder="¿Qué esta buscando?">
-                <div class="lupa">
-                    <label for="barraBusqueda">
-                        <img class="lupaimg" src="img/lupa-png.png" alt="lupa" for="#barraBusqueda"></img>
-                    </label>
+            <div class="div-Titulo">
+                <h2 class="titulo">Frutería</h2>
+            </div>
+            <div class="busqueda">
+                <div class="div-autor">
+                    <p>Xabier</p>
                 </div>
-            </nav>
-            <div class="botones">
+                <nav class="navegador">
+                    <input id="barraBusqueda"type="text" placeholder="Buscar...">
+                </nav>
+            </div>
+            <!-- <div class="botones">
                 <button id="ordenarMenorMayor">ordenarMenorMayor</button>
                 <button id="ordenarMayorMenor">ordenarMayorMenor</button>
                 <button id="ordenarNombre">ordenar por Nombre</button>
-            </div>
-            <div class="carrito">
-                <img class="carritoimg" src="img\carrito.png" alt="carrito">
-            </div>
+            </div> -->
+            <section>
+                <h4>carrito</h4>
+            </section>
         </header>
-        <main class = "principal">
+        <main class= "principal">
+            <div class="div-Frutas">
+                <h1 class="div-Frutas-Texto">Nuestras frutas</h1>
+            </div>
             <section id="seccionlibros"></section>
             <div class = "separador"></div>
             <aside id="asidecarrito"></aside>

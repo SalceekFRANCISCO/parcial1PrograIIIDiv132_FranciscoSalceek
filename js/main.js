@@ -1,19 +1,3 @@
-// <!-- Enunciado:
-// Una biblioteca digital necesita un sistema web sencillo para mostrar y gestionar sus libros.
-// Sigue los siguientes pasos:
-
-// Crea un array de objetos llamado libros. 
-// Cada objeto debe representar un libro con: id, titulo, autor, precio y ruta_img.
-
-// Muestra los libros en pantalla en formato de tarjetas (imagen, título, autor y precio).
-
-// Agrega un input de búsqueda que permita filtrar los libros por título o autor.
-
-// Añade un botón en cada tarjeta que permita agregar un libro a una lista de “favoritos”.
-
-// Cada vez que se agregue un libro a favoritos, muéstralo en consola y asegúrate de que no se repita.
-// Implementa una función init() que inicialice la aplicación mostrando todos los libros.
-
 // variables
 let contenedorLibros = document.querySelector("#seccionlibros");
 
@@ -29,6 +13,7 @@ let ordenarNombre = document.querySelector("#ordenarNombre");
 
 //array de botones
 const libros = [
+    {id: 1, nombre: 'Cien años de soledad', precio: 8500, ruta_img: 'img/cien_anos_de_soledad.jpg'},
     {id: 1, titulo: 'Cien años de soledad', autor: 'Gabriel García Márquez', precio: 8500, ruta_img: 'img/cien_anos_de_soledad.jpg'},
     {id: 2, titulo: 'El principito', autor: 'Antoine de Saint-Exupéry', precio: 5200, ruta_img: 'img/cien_anos_de_soledad.jpg'},
     {id: 3, titulo: '1984', autor: 'George Orwell', precio: 6900, ruta_img: 'img/cien_anos_de_soledad.jpg'},
@@ -41,12 +26,6 @@ const libros = [
     {id: 10, titulo: 'Matar a un ruiseñor', autor: 'Harper Lee', precio: 8600, ruta_img: 'img/cien_anos_de_soledad.jpg'},
     {id: 11, titulo: 'Los miserables', autor: 'Victor Hugo', precio: 9900, ruta_img: 'img/cien_anos_de_soledad.jpg'},
     {id: 12, titulo: 'El alquimista', autor: 'Paulo Coelho', precio: 6200, ruta_img: 'img/cien_anos_de_soledad.jpg'},
-    {id: 13, titulo: 'It', autor: 'Stephen King', precio: 10500, ruta_img: 'img/cien_anos_de_soledad.jpg'},
-    {id: 14, titulo: 'El nombre del viento', autor: 'Patrick Rothfuss', precio: 9400, ruta_img: 'img/cien_anos_de_soledad.jpg'},
-    {id: 15, titulo: 'Drácula', autor: 'Bram Stoker', precio: 8100, ruta_img: 'img/cien_anos_de_soledad.jpg'},
-    {id: 16, titulo: 'La metamorfosis', autor: 'Franz Kafka', precio: 5600, ruta_img: 'img/cien_anos_de_soledad.jpg'},
-    {id: 17, titulo: 'Los juegos del hambre', autor: 'Suzanne Collins', precio: 7200, ruta_img: 'img/cien_anos_de_soledad.jpg'},
-    {id: 18, titulo: 'Harry Potter y la piedra filosofal', autor: 'J. K. Rowling', precio: 8900, ruta_img: 'img/cien_anos_de_soledad.jpg'}
 ];
 
 //#region libros con url corregida

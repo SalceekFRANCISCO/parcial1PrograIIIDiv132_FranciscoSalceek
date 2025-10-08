@@ -1,4 +1,3 @@
-
 @media (max-width: 768px){
     .autor{
         font-size: large;
@@ -12,12 +11,12 @@
 
 body{
     margin: 0px;
-    background-color: rgb(251, 221, 177);
+    background-color: white;
 }
 
 main{
     /* border: 2px solid black; */
-    background-color: rgb(251, 221, 177);
+    background-color: white;
 } 
 
 #seccionlibros ul{
@@ -41,7 +40,7 @@ main{
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    background-color: rgb(251, 221, 177);
+    background-color: white;
 }
 
 .imgLibro{
@@ -55,8 +54,13 @@ main{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(238, 196, 28, 0.625);
+    background-color: rgba(15, 175, 82, 0.92);
     
+}
+
+.busqueda{
+    display: flex;
+    gap: 60px;
 }
 
 .botones{
@@ -125,7 +129,7 @@ main{
     border-radius: 4px;
     font-family: "Play", sans-serif;;
     border-color: rgba(178, 151, 115, 0.129);
-    background-color: rgba(20, 134, 239, 0.811);
+    background-color: rgba(15, 175, 82, 0.92);
     color: aliceblue;
     /* text-transform: uppercase; */
     /* font-weight: bold; */
@@ -142,9 +146,14 @@ main{
 
 .principal {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     /* border: 3px solid; */
     margin-top: 0px;
+}
+
+.div-Frutas-Texto{
+    text-align: center;
 }
 
 .principal li {
