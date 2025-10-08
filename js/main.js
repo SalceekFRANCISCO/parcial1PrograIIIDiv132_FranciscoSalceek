@@ -84,19 +84,22 @@ function mostrarCarrito(){
         let total = calcularTotal(carritoPersonal);
         let cantidadProductosCarrito = `<p> Carrito:${cantidadCarrito} Productos</p>`;
         let carritoCargado = "<ul class=listaCarrito> ";
+
         carritoCargado +=`<h2 class="carrito-titulo">Carrito</h2>`
         carritoPersonal.forEach((fruta,indice) => {
                 carritoCargado +=
-                `<li class="bloque-item">
+                `<div class="sos">
+                    <li class="bloque-item">
                     <p class="nombre-item">${fruta.nombre}-- $${fruta.precio}</p>
                     <button class="botonEliminar" onclick="eliminarFruta(${(indice)})">Eliminar</button>
-                </li>`
+                    </li>
+                </div>`
         });
 
         carritoCargado += `<h3 class="total">Total: $ ${total}</p> </h3>`;
-        carritoCargado += `<p> Productos:  ${cantidadCarrito} </p>`;
         carritoCargado += `<button class="botonEliminar" onclick="vaciarCarritoCompleto()">Vaciar el carrito</button>`;
-        carritocantidad.innerHTML += cantidadProductosCarrito;
+        carritocantidad.innerHTML = cantidadProductosCarrito;
+        
         carrito.innerHTML = carritoCargado;
     }
     
@@ -105,12 +108,15 @@ function mostrarCarrito(){
 //vaciar al carrito completo
 function vaciarCarritoCompleto(){
     vaciarCarrito();
+    carritocantidad.innerHTML = `<p>Carrito: ${carritoPersonal.length} productos</p>`;
+    ;
 }
 
 function vaciarCarrito(){
     carritoPersonal = [];
     
     carrito.innerHTML = carritoPersonal;
+    carritocantidad.innerHTML = `<p>Carrito: ${carritoPersonal.length} productos</p>`;
 
 }
 

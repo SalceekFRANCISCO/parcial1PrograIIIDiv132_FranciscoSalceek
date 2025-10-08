@@ -41,7 +41,6 @@ main{
     background-color: white;
 }
 
-
 .bloque-item h3{
     text-align: end;
 }
@@ -58,6 +57,7 @@ main{
     justify-content: space-between;
     align-items: center;
     background-color: rgba(15, 175, 82, 0.92);
+    color: white;
     
 }
 
@@ -102,6 +102,11 @@ main{
     /* display: ; */
 }
 
+.listaCarrito .bloque-item{
+    border: 10px red;
+    /* display: ; */
+}
+
 .botonEliminar{
     border-radius: 5px;
     border-color: red;
@@ -111,18 +116,6 @@ main{
 
 .carrito-titulo{
     text-align: center;
-}
-
-.lupa{
-    padding-top: 0.1vh;
-    border-radius: 3px;
-    margin-left: 0px;
-
-}
-
-.lupaimg{
-    width: 1vw;
-    height: 2.5vh;
 }
 
 .autor{
@@ -138,9 +131,6 @@ main{
 }
 
 /* Pseudoclases*/
-.carrito:hover{
-    background-color: rgba(89, 155, 226, 0.734);
-}
 
 .carrito:active{
     background-color: rgb(31, 105, 185);
