@@ -10,6 +10,8 @@ let carritocantidad = document.querySelector("#cantidad-carrito");//
 let botonMenorAMayor = document.querySelector("#ordenarMenorMayor");
 
 let ordenarNombre = document.querySelector("#ordenarNombre");
+
+let autor = document.querySelector("#div-autor");
 //#endregion
 
 //#region array de frutas
@@ -32,6 +34,18 @@ let ordenarNombre = document.querySelector("#ordenarNombre");
 
 let favoritos = [];
 let listadoFrutas= "";
+
+function imprimirdatos(){
+    const alumno = {
+        nombre: "Francisco",
+        apellido: "Salceek",
+        dni: "46756868",
+    }
+
+    console.log(`Alumno: ${alumno.nombre} ${alumno.apellido} - DNI: ${alumno.dni}`);
+    let nombre = alumno.apellido +" "+ alumno.nombre;
+    autor.innerHTML += nombre;
+}
 
 function ordenar(){
     botonMenorAMayor.addEventListener("click", function(){
@@ -75,18 +89,24 @@ function mostrarCarrito(){
                 carritoCargado +=
                 `<li class="bloque-item">
                     <p class="nombre-item">${fruta.nombre}-- $${fruta.precio}</p>
-                    <button class="botonEliminar" onclick="eliminarLibro(${(indice)})">Eliminar</button>
+                    <button class="botonEliminar" onclick="eliminarFruta(${(indice)})">Eliminar</button>
                 </li>`
         });
 
         carritoCargado += `<h3>Total de carrito: $ ${total}</p> </h3>`;
         carritoCargado += `<p> Productos:  ${cantidadCarrito} </p>`;
-        carritoCargado += `<button class="vaciarCarrito" onclick="vaciarCarrito(${(indice)})">Eliminar</button>`;
+        carritoCargado += `<button class="botonEliminar" onclick="vaciarCarritoCompleto()">Vaciar el carrito</button>`;
         // carritocantidad.innerHTML += cantidadProductosCarrito;
         carrito.innerHTML = carritoCargado;
     }
     
 };
+
+function vaciarCarritoCompleto(){
+    vaciarCarrito();
+    
+}
+  
 
 function vaciarCarrito(){
     favoritos = [];
@@ -95,7 +115,7 @@ function vaciarCarrito(){
 
 }
 
-function eliminarLibro(indice){
+function eliminarFruta(indice){
     favoritos.splice(indice,1);
 
     mostrarCarrito();
@@ -162,6 +182,7 @@ function agregarLibro(id){
 }
 
 function init(){
+    imprimirdatos();
     mostrarListaFrutas(frutas); 
     buscar();
     ordenar();

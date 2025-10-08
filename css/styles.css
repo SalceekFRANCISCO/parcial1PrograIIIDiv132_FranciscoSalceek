@@ -157,6 +157,7 @@ main{
     background-color: rgba(15, 175, 82, 0.92);
     color: aliceblue;
     margin-top: 9px;
+    border-radius: 6px;
 }
 
 .botonAgregar:hover{
@@ -202,16 +203,3 @@ main{
     margin-top: 0px;
     text-align: center;
 }
-
-/* .boton:hover{
-    cursor: pointer;
-    color: red;
-} */
-
-/**
-.separador {
-    border: 20px solid rgb(10, 61, 3);
-    height: 100vh;
-    overflow: auto;
-    }
-*/
