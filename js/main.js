@@ -93,20 +93,19 @@ function mostrarCarrito(){
                 </li>`
         });
 
-        carritoCargado += `<h3>Total de carrito: $ ${total}</p> </h3>`;
+        carritoCargado += `<h3 class="total">Total: $ ${total}</p> </h3>`;
         carritoCargado += `<p> Productos:  ${cantidadCarrito} </p>`;
         carritoCargado += `<button class="botonEliminar" onclick="vaciarCarritoCompleto()">Vaciar el carrito</button>`;
-        // carritocantidad.innerHTML += cantidadProductosCarrito;
+        carritocantidad.innerHTML += cantidadProductosCarrito;
         carrito.innerHTML = carritoCargado;
     }
     
 };
 
+//vaciar al carrito completo
 function vaciarCarritoCompleto(){
     vaciarCarrito();
-    
 }
-  
 
 function vaciarCarrito(){
     carritoPersonal = [];
@@ -122,6 +121,7 @@ function eliminarFruta(indice){
     
 }
 
+// calcular el total de precio de los productos
 function calcularTotal(array) {
     let total = 0;
 
@@ -131,15 +131,17 @@ function calcularTotal(array) {
     return total;
 }
 
+//mostrar la lista de frutas
 function mostrarListaFrutas(array){
+    console.log(array);
     let listadoFrutas= "<ul class=lista> ";
     array.forEach(fruta => {
         listadoFrutas += 
         `<li id=listaFrutas>
-            <img class=imgLibro src=${fruta.ruta_img} alt="${fruta.nombre}">
+            <img class=imgFruta src=${fruta.ruta_img} alt="${fruta.nombre}">
             <h2 class=autor>${fruta.nombre}</h2>
             <p>$${fruta.precio}</p>
-            <button class="botonAgregar" onclick="agregarLibro(${fruta.id})">Agregar a carrito</button>
+            <button class="botonAgregar" onclick="agregarFruta(${fruta.id})">Agregar a carrito</button>
         </li>`;
     });
     listadoFrutas += "</ul>";
@@ -148,7 +150,7 @@ function mostrarListaFrutas(array){
 }
 
 // para buscar frutas el punto 4
-function buscar(){
+function buscarFruta(){
     botonBuscar.addEventListener("keydown",function(){
         
         let valorBusqueda = botonBuscar.value;
@@ -161,30 +163,32 @@ function buscar(){
     });
 }
 
-function validarExistencia(libro){
+// valida que no se agregue mas de una fruta
+function validarExistencia(fruta){
 
-    let existe = carritoPersonal.some(lib => lib.id == libro.id);
+    let existe = carritoPersonal.some(frut => frut.id == fruta.id);
 
     if(existe){
-        // alert("el libro ya se encuentra en la lista");
+        // alert("La fruta ya se encuentra en la lista");
     }
     else{
-        carritoPersonal.push(libro);
-        // alert("libro agregado correctamente");
-        console.log(libro);
+        carritoPersonal.push(fruta);
+        // alert("La fruta se agrego correctamente");
+        console.log(fruta);
     }
 }
 
-function agregarLibro(id){
-    let libro = frutas.find(libro => libro.id == id);
-    validarExistencia(libro);
+// agregar fruta al array
+function agregarFruta(id){
+    let fruta = frutas.find(frut => frut.id == id);
+    validarExistencia(fruta);
     mostrarCarrito();
 }
 
 function init(){
     imprimirdatos();
     mostrarListaFrutas(frutas); 
-    buscar();
+    buscarFruta();
     ordenar();
     ordenarPorNombre();
 }

@@ -3,7 +3,7 @@
         font-size: large;
     }
 
-    .imgLibro{
+    .imgFruta{
     height: 2000px;
     width: 107px;
     }
@@ -31,8 +31,6 @@ main{
 #listaFrutas{
     width: 12vw;
     height: 22vh;
-    /* width: 200px; */
-    /* height: 300px; */
     padding: 5px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     display: flex;
@@ -43,7 +41,12 @@ main{
     background-color: white;
 }
 
-.imgLibro{
+
+.bloque-item h3{
+    text-align: end;
+}
+
+.imgFruta{
     height: 104px;
     width: 64px;
 }
@@ -175,6 +178,12 @@ main{
     justify-content: space-between;
     /* border: 3px solid; */
     margin-top: 0px;
+}
+
+.principal .total{
+    border: 6px;
+    text-align: end;
+    margin-right: 8px;
 }
 
 .div-Frutas-Texto{
