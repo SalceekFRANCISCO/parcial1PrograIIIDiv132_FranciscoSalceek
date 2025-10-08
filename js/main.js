@@ -32,7 +32,7 @@ let autor = document.querySelector("#div-autor");
 //#endregion
 
 
-let favoritos = [];
+let carritoPersonal = [];
 let listadoFrutas= "";
 
 function imprimirdatos(){
@@ -75,17 +75,17 @@ function ordenarPorNombre(){
 
 // punto 5 mostrar carrito
 function mostrarCarrito(){
-    let cantidadCarrito = favoritos.length;
+    let cantidadCarrito = carritoPersonal.length;
 
     if(cantidadCarrito === 0){
         vaciarCarrito();
     }
     else{
-        let total = calcularTotal(favoritos);
+        let total = calcularTotal(carritoPersonal);
         let cantidadProductosCarrito = `<p> Carrito:${cantidadCarrito} Productos</p>`;
         let carritoCargado = "<ul class=listaCarrito> ";
         carritoCargado +=`<h2 class="carrito-titulo">Carrito</h2>`
-        favoritos.forEach((fruta,indice) => {
+        carritoPersonal.forEach((fruta,indice) => {
                 carritoCargado +=
                 `<li class="bloque-item">
                     <p class="nombre-item">${fruta.nombre}-- $${fruta.precio}</p>
@@ -109,14 +109,14 @@ function vaciarCarritoCompleto(){
   
 
 function vaciarCarrito(){
-    favoritos = [];
+    carritoPersonal = [];
     
-    carrito.innerHTML = favoritos;
+    carrito.innerHTML = carritoPersonal;
 
 }
 
 function eliminarFruta(indice){
-    favoritos.splice(indice,1);
+    carritoPersonal.splice(indice,1);
 
     mostrarCarrito();
     
@@ -139,7 +139,7 @@ function mostrarListaFrutas(array){
             <img class=imgLibro src=${fruta.ruta_img} alt="${fruta.nombre}">
             <h2 class=autor>${fruta.nombre}</h2>
             <p>$${fruta.precio}</p>
-            <button class="botonAgregar" onclick="agregarLibro(${fruta.id})">Agregar a favoritos</button>
+            <button class="botonAgregar" onclick="agregarLibro(${fruta.id})">Agregar a carrito</button>
         </li>`;
     });
     listadoFrutas += "</ul>";
@@ -163,13 +163,13 @@ function buscar(){
 
 function validarExistencia(libro){
 
-    let existe = favoritos.some(lib => lib.id == libro.id);
+    let existe = carritoPersonal.some(lib => lib.id == libro.id);
 
     if(existe){
         // alert("el libro ya se encuentra en la lista");
     }
     else{
-        favoritos.push(libro);
+        carritoPersonal.push(libro);
         // alert("libro agregado correctamente");
         console.log(libro);
     }
